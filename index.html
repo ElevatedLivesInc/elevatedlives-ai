@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elevated Lives Inc - AI SaaS Automation</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        header {
+            background: rgba(255,255,255,0.95);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        h1 {
+            font-size: 3.5rem;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+        }
+        .subtitle { font-size: 1.4rem; color: #666; margin-bottom: 2rem; }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        .feature-card {
+            background: rgba(255,255,255,0.95);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            border-left: 5px solid #667eea;
+        }
+        .feature-card:hover { transform: translateY(-10px); }
+        .feature-icon { font-size: 3rem; margin-bottom: 1rem; }
+        .cta-section {
+            text-align: center;
+            background: rgba(255,255,255,0.95);
+            padding: 4rem 2rem;
+            border-radius: 20px;
+        }
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 1.2rem 3rem;
+            font-size: 1.3rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            margin: 1rem;
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover { transform: translateY(-3px); }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        .stat { text-align: center; background: rgba(255,255,255,0.9); padding: 2rem; border-radius: 15px; }
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        footer { text-align: center; padding: 3rem 0; color: rgba(255,255,255,0.9); }
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .features { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Elevated Lives Inc</h1>
+            <p class="subtitle">AI-Powered SaaS Automation for Small Businesses</p>
+            <p>Gaithersburg, MD | Founded April 2025</p>
+        </header>
+
+        <div class="stats">
+            <div class="stat"><div class="stat-number">100+</div><div>Processes Automated</div></div>
+            <div class="stat"><div class="stat-number">50%</div><div>Cost Reduction</div></div>
+            <div class="stat"><div class="stat-number">24/7</div><div>AI Operations</div></div>
+            <div class="stat"><div class="stat-number">99.9%</div><div>Uptime</div></div>
+        </div>
+
+        <section class="features">
+            <div class="feature-card">
+                <div class="feature-icon">🤖</div>
+                <h2>AI Automation</h2>
+                <p>Replace repetitive tasks with intelligent AI agents. Email, invoicing, scheduling - fully automated.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h2>Cloudflare Edge</h2>
+                <p>Global deployment. Zero server management, infinite scale, sub-50ms response worldwide.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📈</div>
+                <h2>SaaS Subscriptions</h2>
+                <p>$49/month starter. Stripe payments, zero setup, instant value.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h2>Enterprise Security</h2>
+                <p>SOC 2, GDPR ready. Your data stays yours. Bank-level encryption.</p>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <h2>Automate Your Business Today</h2>
+            <p>Join 50+ small businesses saving 20+ hours/week</p>
+            <a href="mailto:hello@elevatedlives.xyz" class="cta-button">Get Early Access</a>
+            <a href="#demo" class="cta-button">Book Demo</a>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Elevated Lives Inc | Maryland S-Corp | 
+        <a href="mailto:hello@elevatedlives.xyz" style="color: rgba(255,255,255,0.8);">Contact</a></p>
+    </footer>
+</body>
+</html>
