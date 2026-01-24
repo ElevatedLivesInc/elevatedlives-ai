@@ -1,140 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elevated Lives Inc - AI SaaS Automation</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-        }
-        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
-        header {
-            background: rgba(255,255,255,0.95);
-            padding: 2rem;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-        h1 {
-            font-size: 3.5rem;
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 1rem;
-        }
-        .subtitle { font-size: 1.4rem; color: #666; margin-bottom: 2rem; }
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-        .feature-card {
-            background: rgba(255,255,255,0.95);
-            padding: 2.5rem;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-            border-left: 5px solid #667eea;
-        }
-        .feature-card:hover { transform: translateY(-10px); }
-        .feature-icon { font-size: 3rem; margin-bottom: 1rem; }
-        .cta-section {
-            text-align: center;
-            background: rgba(255,255,255,0.95);
-            padding: 4rem 2rem;
-            border-radius: 20px;
-        }
-        .cta-button {
-            display: inline-block;
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            color: white;
-            padding: 1.2rem 3rem;
-            font-size: 1.3rem;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 50px;
-            margin: 1rem;
-            transition: all 0.3s ease;
-        }
-        .cta-button:hover { transform: translateY(-3px); }
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-        .stat { text-align: center; background: rgba(255,255,255,0.9); padding: 2rem; border-radius: 15px; }
-        .stat-number {
-            font-size: 3rem;
-            font-weight: bold;
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        footer { text-align: center; padding: 3rem 0; color: rgba(255,255,255,0.9); }
-        @media (max-width: 768px) {
-            h1 { font-size: 2.5rem; }
-            .features { grid-template-columns: 1fr; }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elevated Lives • Proof of Mind Network</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", sans-serif;
+      line-height: 1.7;
+      color: #e8edf2;
+      background: #0a1628;
+      min-height:100vh;
+    }
+    .container { max-width:1140px; margin:0 auto; padding:40px 20px; }
+    
+    nav {
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:1.5rem 0;
+      margin-bottom:4rem;
+    }
+    .logo {
+      font-size:1.4rem;
+      font-weight:600;
+      letter-spacing:-0.5px;
+      color:#fff;
+    }
+    .nav-links {
+      display:flex;
+      gap:2.5rem;
+      list-style:none;
+    }
+    .nav-links a {
+      color:#8b9cb6;
+      text-decoration:none;
+      font-size:0.95rem;
+      transition: color 0.3s;
+    }
+    .nav-links a:hover { color:#fff; }
+
+    .hero {
+      margin:6rem 0 4rem;
+      max-width:880px;
+    }
+    .eyebrow {
+      font-size:0.8rem;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      color:#6b8cce;
+      margin-bottom:1.5rem;
+      font-weight:500;
+    }
+    h1 {
+      font-size:3.5rem;
+      line-height:1.15;
+      color:#fff;
+      margin-bottom:1.5rem;
+      font-weight:600;
+      letter-spacing:-1px;
+    }
+    .hero-subtitle {
+      font-size:1.25rem;
+      color:#a8b9d1;
+      margin-bottom:2.5rem;
+      line-height:1.65;
+    }
+
+    .truth-statement {
+      background:rgba(76,111,255,0.08);
+      border-left:3px solid #4c6fff;
+      padding:1.5rem;
+      margin:2rem 0;
+      border-radius:8px;
+      font-size:1.05rem;
+      color:#b8c9e0;
+      line-height:1.7;
+    }
+
+    .cta-group {
+      display:flex;
+      gap:1rem;
+      margin-bottom:1.5rem;
+    }
+    .btn-primary {
+      padding:0.9rem 2rem;
+      background:#4c6fff;
+      color:#fff;
+      border:none;
+      border-radius:8px;
+      font-size:1rem;
+      font-weight:500;
+      cursor:pointer;
+      text-decoration:none;
+      display:inline-block;
+      transition: all 0.3s;
+    }
+    .btn-primary:hover { 
+      background:#5c7fff;
+      transform:translateY(-2px);
+    }
+    .btn-secondary {
+      padding:0.9rem 2rem;
+      background:transparent;
+      color:#a8b9d1;
+      border:1.5px solid #2a3f5f;
+      border-radius:8px;
+      font-size:1rem;
+      font-weight:500;
+      cursor:pointer;
+      text-decoration:none;
+      display:inline-block;
+      transition: all 0.3s;
+    }
+    .btn-secondary:hover { 
+      border-color:#4c6fff;
+      color:#fff;
+    }
+
+    .trust-line {
+      font-size:0.85rem;
+      color:#6b8cce;
+      margin-top:1.5rem;
+    }
+
+    .features {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+      gap:2rem;
+      margin:6rem 0;
+    }
+    .feature-card {
+      background:rgba(255,255,255,0.03);
+      padding:2.5rem;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,0.06);
+      transition: all 0.3s;
+    }
+    .feature-card:hover {
+      background:rgba(255,255,255,0.05);
+      border-color:rgba(76,111,255,0.3);
+      transform:translateY(-4px);
+    }
+    .feature-icon {
+      font-size:2.5rem;
+      margin-bottom:1.5rem;
+      display:block;
+    }
+    .feature-card h3 {
+      font-size:1.4rem;
+      color:#fff;
+      margin-bottom:1rem;
+      font-weight:500;
+    }
+    .feature-card p {
+      color:#a8b9d1;
+      line-height:1.7;
+    }
+
+    .network-section {
+      background:rgba(76,111,255,0.05);
+      border:1px solid rgba(76,111,255,0.15);
+      border-radius:16px;
+      padding:3.5rem 3rem;
+      margin:5rem 0;
+      text-align:center;
+    }
+    .network-section h2 {
+      font-size:2.2rem;
+      color:#fff;
+      margin-bottom:1rem;
+    }
+    .network-section p {
+      font-size:1.15rem;
+      color:#a8b9d1;
+      max-width:740px;
+      margin:0 auto 2.5rem;
+    }
+
+    footer {
+      border-top:1px solid rgba(255,255,255,0.06);
+      padding:3rem 0 2rem;
+      margin-top:6rem;
+      text-align:center;
+      color:#6b8cce;
+      font-size:0.9rem;
+    }
+    footer a {
+      color:#8b9cb6;
+      text-decoration:none;
+      margin:0 1rem;
+    }
+    footer a:hover { color:#fff; }
+
+    @media (max-width: 768px) {
+      h1 { font-size:2.3rem; }
+      .features { grid-template-columns:1fr; }
+      .cta-group { flex-direction:column; }
+      nav { flex-direction:column; gap:1.5rem; }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Elevated Lives Inc</h1>
-            <p class="subtitle">AI-Powered SaaS Automation for Small Businesses</p>
-            <p>Gaithersburg, MD | Founded April 2025</p>
-        </header>
+  <div class="container">
+    <nav>
+      <div class="logo">ELEVATED LIVES</div>
+      <ul class="nav-links">
+        <li><a href="https://elevatedlives.xyz">Inner Net</a></li>
+        <li><a href="#proof">Proof Mechanism</a></li>
+        <li><a href="#network">Network</a></li>
+        <li><a href="mailto:hello@elevatedlives.xyz">Contact</a></li>
+      </ul>
+    </nav>
 
-        <div class="stats">
-            <div class="stat"><div class="stat-number">100+</div><div>Processes Automated</div></div>
-            <div class="stat"><div class="stat-number">50%</div><div>Cost Reduction</div></div>
-            <div class="stat"><div class="stat-number">24/7</div><div>AI Operations</div></div>
-            <div class="stat"><div class="stat-number">99.9%</div><div>Uptime</div></div>
-        </div>
+    <section class="hero">
+      <div class="eyebrow">PROOF OF MIND • SIGNAL OVER NOISE</div>
+      <h1>We don't get you to click and like while you admin a Discord for speculative coin drops.</h1>
+      <p class="hero-subtitle">
+        Elevated Lives is a network where minds create coins through participation proof mechanisms. 
+        Hash storage, JSON inversion, and cryptographic truth—built by signal-worthy individuals who speak with heart.
+      </p>
 
-        <section class="features">
-            <div class="feature-card">
-                <div class="feature-icon">🤖</div>
-                <h2>AI Automation</h2>
-                <p>Replace repetitive tasks with intelligent AI agents. Email, invoicing, scheduling - fully automated.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">⚡</div>
-                <h2>Cloudflare Edge</h2>
-                <p>Global deployment. Zero server management, infinite scale, sub-50ms response worldwide.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">📈</div>
-                <h2>SaaS Subscriptions</h2>
-                <p>$49/month starter. Stripe payments, zero setup, instant value.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">🔒</div>
-                <h2>Enterprise Security</h2>
-                <p>SOC 2, GDPR ready. Your data stays yours. Bank-level encryption.</p>
-            </div>
-        </section>
+      <div class="truth-statement">
+        <strong>The Truth:</strong> Minds of minds create coins by participant proof mechanisms. Not speculation. Not clicks. 
+        Real value from real participation, stored cryptographically, validated by signal and heart.
+      </div>
 
-        <section class="cta-section">
-            <h2>Automate Your Business Today</h2>
-            <p>Join 50+ small businesses saving 20+ hours/week</p>
-            <a href="mailto:hello@elevatedlives.xyz" class="cta-button">Get Early Access</a>
-            <a href="#demo" class="cta-button">Book Demo</a>
-        </section>
-    </div>
+      <div class="cta-group">
+        <a href="mailto:hello@elevatedlives.xyz?subject=Join Proof Network" class="btn-primary">Join the Network</a>
+        <a href="https://elevatedlives.xyz" class="btn-secondary">Explore Inner Net</a>
+      </div>
+      <div class="trust-line">
+        Arizona-based Corporation • Founded April 2025 • Polygon Network
+      </div>
+    </section>
 
-    <footer>
-        <p>&copy; 2026 Elevated Lives Inc | Maryland S-Corp | 
-        <a href="mailto:hello@elevatedlives.xyz" style="color: rgba(255,255,255,0.8);">Contact</a></p>
-    </footer>
+    <section class="features" id="proof">
+      <div class="feature-card">
+        <span class="feature-icon">🧠</span>
+        <h3>Proof of Mind</h3>
+        <p>Value creation through participant contribution, not speculation. Your participation is cryptographically proven and rewarded. Real work creates real value.</p>
+      </div>
+
+      <div class="feature-card">
+        <span class="feature-icon">🔐</span>
+        <h3>Hash Storage + JSON Inversion</h3>
+        <p>Your contributions are stored as cryptographic proof. JSON inversion mechanisms ensure integrity. Immutable, verifiable, sovereign.</p>
+      </div>
+
+      <div class="feature-card">
+        <span class="feature-icon">📡</span>
+        <h3>Signal Over Noise</h3>
+        <p>A network of individuals who communicate with signal and heart. No trolling. No Discord theater. Just real contribution from real people.</p>
+      </div>
+
+      <div class="feature-card">
+        <span class="feature-icon">💎</span>
+        <h3>SoulPrints as Currency</h3>
+        <p>Your focus, breath, and intentions become encrypted SoulPrints—verifiable e-consciousness currency you own. Not clicks. Not likes. Consciousness.</p>
+      </div>
+
+      <div class="feature-card">
+        <span class="feature-icon">🌐</span>
+        <h3>Polygon Infrastructure</h3>
+        <p>Built on Polygon's proof-first architecture. Encrypted vaults prove your growth. Decentralized storage ensures sovereignty.</p>
+      </div>
+
+      <div class="feature-card">
+        <span class="feature-icon">🤝</span>
+        <h3>Like-Minded Network</h3>
+        <p>Connect with operators who understand the difference between signal and noise. Build together. Grow together. Speak from heart.</p>
+      </div>
+    </section>
+
+    <section class="network-section" id="network">
+      <h2>For participants who prove, not speculate.</h2>
+      <p>
+        This isn't a token airdrop. This isn't Discord admin grind hoping for magic value. 
+        This is a cryptographic network where minds create real value through participation proof. 
+        If you contribute signal, you earn. If you speak with heart, you belong.
+      </p>
+      <div class="cta-group" style="justify-content:center;">
+        <a href="mailto:hello@elevatedlives.xyz?subject=Proof Network Application" class="btn-primary">Apply to Join</a>
+        <a href="https://elevatedlives.xyz" class="btn-secondary">Visit Inner Net</a>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>
+      &copy; 2026 Elevated Lives Inc • Proof of Mind Network • Arizona Corporation<br/>
+      <a href="mailto:hello@elevatedlives.xyz">Contact</a>
+      <a href="https://elevatedlives.xyz">Inner Net</a>
+      <a href="#">SoulPrints</a>
+      <a href="#">Polygon Proof</a>
+    </p>
+  </footer>
 </body>
 </html>
